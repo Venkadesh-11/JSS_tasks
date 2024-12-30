@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+
+    }
+
+    li {
+      margin-bottom: 20px;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 1em;
+      width: 200px;
+      text-align: center;
+      border: 3px solid;
+      border-radius: 5px;
+
+    }
+
+    #addTask {
+      padding: 10px 20px;
+      font-size: 1em;
+      margin-left: 10px;
+      cursor: pointer;
+      color: red;
+      box-shadow: 2px 2px 2px green;
+    }
+
+    #addTask:hover {
+      transform: scale(0.95);
+      color: green;
+      box-shadow: -2px -2px 3px red;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      font-size: 1.2em;
+      margin: 10px 0;
+      text-align: left;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      color: yellowgreen;
+    }
+
+    li::marker {
+      color: red;
+    }
+
+    #btn {
+      padding: 10px;
+      background-color: yellow;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin-left: 20px;
+      font-size: 0.6rem;
+      color: red;
+      width: 100px;
+      cursor: pointer;
+      border-radius: 5px;
+      border: 2px solid;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Simple To-Do List</h1>
+  <input type="text" id="taskInput" placeholder="Enter a task">
+  <button id="addTask">Add Task</button>
+  <ol id="taskList"></ol>
+
+  <script>
+    var Input = document.querySelector("input");
+    var addTask = document.querySelector("button")
+    var list = document.querySelector("ol")
+    addTask.addEventListener(
+      "click", () => {
+        var task = Input.value;
+        if (task) {
+          let complete = document.createElement("button")
+
+          let items = document.createElement("li")
+          complete.id = "btn"
+          complete.innerText = "Completed"
+          let creat
+          items.innerText = Input.value;
+
+          items.append(complete);
+
+          list.append(items)
+
+          complete.addEventListener("click", () => {
+            items.remove()
+          })
+
+        }
+        else {
+          alert("provide task")
+        }
+      }
+    )
+  </script>
+</body>
+
+</html>
