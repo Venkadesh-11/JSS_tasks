@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            margin: 5px;
+            padding: 10px;
+        }
+        button{
+            width: 100px;
+            padding: 10px;
+          color: red;
+          border:2px solid black;
+          border-radius: 6px;
+            margin: 10px 20px 30px
+        }
+        table{
+            margin-left: 5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <input type="number" placeholder="a" id="a"><br>
+        <input type="number" placeholder="b" id="b"><br>
+        <input type="number" placeholder="op" id="op"><br>
+    </form>
+    <div id="out"></div>
+    <button onclick="add()">add</button>
+    <table border="1" cellpadding="10px">
+        <tr>
+            <th>num1</th>
+            <th>num2</th>
+            <th>num3</th>
+        </tr>
+
+    </table>
+    <script>
+        let add = () => {
+            let a = document.getElementById("a").value
+            let b = document.getElementById("b").value
+
+            // console.log(Number(a)+Number(b));
+            console.log(parseInt(a) + parseInt(b));
+            let op = document.getElementById("op")
+            op.value = parseInt(a) + parseInt(b);
+
+            // or this method we can use
+            let a1 = parseInt(document.getElementById("a").value)
+            let b1 = parseInt(document.getElementById("b").value)
+            let add = a1 + b1;
+            let out = document.getElementById("out")
+            out.innerHTML = `<h1>the addttion of ${a1} and ${b1} is ${add}</h1>`
+
+            //! table
+            let table = document.querySelector("table")
+            let row1 = document.createElement("tr")
+
+            row1.innerHTML = `<td>${a1}</td><td>${b1}<td>${add}</td`
+            table.append(row1)
+
+        }
+    </script>
+
+</body>
+
+</html>
