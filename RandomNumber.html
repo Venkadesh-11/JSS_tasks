@@ -1,0 +1,22 @@
+<input type="number" placeholder="1 -10" id="num">
+<button onclick="guess()">guess</button>
+<div class="result">
+</div>
+
+
+<script>
+    let guess = () => {
+        var Otp = Math.floor(Math.random() * 10);
+        console.log(Otp);
+
+        let user_otp = parseInt(document.getElementById("num").value)
+        let result = document.querySelector(".result")
+        if (user_otp == Otp) {
+            result.innerText = "you are right"
+            alert("your correct")
+        }
+        else {
+            result.innerText = "Your wrong"
+        }
+    }
+</script>

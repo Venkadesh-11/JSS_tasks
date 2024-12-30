@@ -1,0 +1,13 @@
+<input type="text" onkeydown="show()" >
+<!-- onkeydown,onkeypress.onkeyup there are the attributes -->
+<h1></h1>
+<script>
+  var H1=document.querySelector("h1");
+  var Input=document.querySelector("input")
+ 
+
+    let show=()=>{
+         H1.innerText=Input.value
+        Input.append("H1")
+    }
+</script>

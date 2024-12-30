@@ -1,0 +1,25 @@
+<style>
+    .result{
+        height: 200px;
+    }
+</style>
+
+
+<input type="text" id="in">
+<button id="btn" onclick="show()">btn</button>
+<h1 id="result">
+
+</h1>
+<script>
+
+    let show=()=>{
+        let text=document.getElementById("in").value
+        let div1=document.getElementById("result")
+        div1.innerText=text
+        console.log(div1.innerText);
+    }
+
+     
+  
+
+</script>

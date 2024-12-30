@@ -1,0 +1,9 @@
+<button id="btn" onclick="hello()">add Hello</button>
+<script>
+    var btn = document.querySelector("button")
+    let hello = () => {
+        var head = document.createElement('h1')
+        head.innerHTML = "hello";
+        btn.after(head)
+    }
+</script>

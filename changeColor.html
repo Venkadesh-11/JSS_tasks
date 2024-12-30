@@ -1,0 +1,23 @@
+<style>
+    .one {
+        height: 100px;
+        width: 100px;
+        background-color: black;
+        margin: 2rem;
+    }
+    .two{
+          background-color: red;
+          width: 600px;
+          transition: 2s ease-in-out;
+    }
+</style>
+
+<div class="one">
+
+</div>
+<button id="btn" onclick="change()">change</button>
+<script>
+    let change=()=>{
+        let div1=document.querySelector(".one").classList.toggle("two")
+    }
+</script>
