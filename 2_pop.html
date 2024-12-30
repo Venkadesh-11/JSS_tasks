@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .overlay {
+            background-color: black;
+            height: 100vh;
+            width: 100vw;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0.85;
+            display: none;
+        }
+
+        .showup {
+
+            align-items: center;
+            background-color: white;
+            height: 150px;
+            width: 200px;
+            left: 40%;
+            position: absolute;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button onclick="show()">show</button>
+    <div class="overlay"></div>
+    <div class="showup">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quis!</p>
+        <button onclick="Close()">close</button>
+    </div>
+    <script>
+        var overlay = document.querySelector(".overlay")
+        var showup = document.querySelector(".showup")
+        let show = () => {
+            overlay.style.display="block"
+            showup.style.display="block"
+        }
+        let Close=()=>{
+            overlay.style.display="none"
+            showup.style.display="none"
+        }
+    </script>
+
+</body>
+
+</html>
